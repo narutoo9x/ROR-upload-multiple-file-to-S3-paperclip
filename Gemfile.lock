@@ -1,3 +1,14 @@
+GIT
+  remote: https://github.com/vikewoods/paperclip-watermark.git
+  revision: 3dbe35d348c193a6894c0d53d927870f71b4eceb
+  specs:
+    paperclip-watermark (1.0.0)
+      minitest
+      minitest-reporters
+      paperclip (>= 2.3.8)
+      rails
+      rake
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -38,6 +49,7 @@ GEM
       i18n (~> 0.7)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
+    ansi (1.5.0)
     arel (8.0.0)
     aws-sdk (2.6.14)
       aws-sdk-resources (= 2.6.14)
@@ -75,6 +87,11 @@ GEM
     mimemagic (0.3.2)
     mini_portile2 (2.1.0)
     minitest (5.10.1)
+    minitest-reporters (1.1.14)
+      ansi
+      builder
+      minitest (>= 5.0)
+      ruby-progressbar
     multi_json (1.12.1)
     nio4r (2.0.0)
     nokogiri (1.7.1)
@@ -118,6 +135,7 @@ GEM
     rb-fsevent (0.9.8)
     rb-inotify (0.9.8)
       ffi (>= 0.5.0)
+    ruby-progressbar (1.8.1)
     ruby_dep (1.5.0)
     spring (2.0.1)
       activesupport (>= 4.2)
@@ -148,6 +166,7 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
   paperclip (~> 5.0.0.beta1)
+  paperclip-watermark!
   pg
   puma (~> 3.7)
   rack-cors
@@ -157,4 +176,4 @@ DEPENDENCIES
   tzinfo-data
 
 BUNDLED WITH
-   1.13.6
+   1.14.0.pre.2

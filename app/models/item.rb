@@ -1,11 +1,21 @@
 class Item < ApplicationRecord
+
   has_many :documents, inverse_of: :item
 
   before_validation :parse_image
   attr_accessor :image_base
   attr_accessor :document_data
 
-  has_attached_file :picture, styles: { medium: "300x300", thumb: "100x100" }, default_url: "/images/:style/missing.png"
+  has_attached_file :picture,
+                    processors: [:watermark],
+                    styles: {
+                      original: {
+                        :watermark_path => "#{Rails.root}/public/images/watermark.png"
+                      },
+                      medium: "300x300",
+                      thumb: "100x100"
+                    },
+                    default_url: "/images/:style/missing.png"
   do_not_validate_attachment_file_type :picture
 
 
